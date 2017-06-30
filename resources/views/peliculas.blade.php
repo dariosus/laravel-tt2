@@ -8,7 +8,9 @@
     <ul>
       @foreach ($moviesVista as $movie)
           <li>
-            {{$movie->title}} - {{$movie->rating}}
+            <a href="/peliculas/{{$movie->id}}">
+              {{$movie->title}} - {{$movie->rating}}
+            </a>
           </li>
       @endforeach
     </ul>

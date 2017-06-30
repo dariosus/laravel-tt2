@@ -31,4 +31,10 @@ Route::get("peliculas/agregar", "PeliculasController@add");
 Route::post("peliculas/agregar", "PeliculasController@store");
 
 
+Route::get("peliculas/{id}/editar", "PeliculasController@edit");
+
+Route::post("peliculas/{id}/editar", "PeliculasController@update");
+
+Route::get("/peliculas/{id}/delete", "PeliculasController@delete");
+
 Route::get("/peliculas/{id}", "PeliculasController@mostrar");
