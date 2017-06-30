@@ -25,10 +25,10 @@ Route::get("/saludar/{nombre}", function($nombre) {
 
 Route::get("/peliculas", "PeliculasController@listar");
 
-Route::get("/peliculas/agregar", "PeliculasController@agregar");
 
-Route::post("/peliculas/agregar", "PeliculasController@agregar");
+Route::get("peliculas/agregar", "PeliculasController@add");
+
+Route::post("peliculas/agregar", "PeliculasController@store");
+
 
 Route::get("/peliculas/{id}", "PeliculasController@mostrar");
-
-Route::get("modificarpelicula", "PeliculasController@modificar");
