@@ -65,7 +65,6 @@ class PeliculasController extends Controller
       $this->validate($request, $condiciones, $mensajes);
 
 
-      $miPeli = Movie::create($request->only("title", "rating", "premios"));
       $miPeli = new Movie;
 
       $miPeli->title = $request->input("titulo");
