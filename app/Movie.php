@@ -33,4 +33,22 @@ class Movie extends Model
       $explotado = explode("-", $this->release_date);
       return $explotado[0];
     }
+
+    public function genero() {
+      return $this->belongsTo("App\Genre", "genre_id");
+    }
+
+    public function getGeneroNombre() {
+      $genero = $this->genero;
+
+      if ($genero == null) {
+        return "";
+      } else {
+        return $genero->name;
+      }
+    }
+
+    public function actores() {
+      return $this->belongsToMany("App\Actor", "actor_movie", "movie_id", "actor_id");
+    }
 }

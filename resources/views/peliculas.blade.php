@@ -9,8 +9,15 @@
       @foreach ($moviesVista as $movie)
           <li>
             <a href="/peliculas/{{$movie->id}}">
-              {{$movie->title}} - {{$movie->rating}}
+              {{$movie->title}} - {{$movie->rating}} - {{$movie->getGeneroNombre()}}
             </a>
+            <ul>
+              @foreach($movie->actores as $actor)
+                <li>
+                  {{$actor->getNombreCompleto()}}
+                </li>
+              @endforeach
+            </ul>
           </li>
       @endforeach
     </ul>

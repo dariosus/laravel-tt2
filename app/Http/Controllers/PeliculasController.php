@@ -10,7 +10,6 @@ use App\Movie;
 class PeliculasController extends Controller
 {
     public function listar() {
-
       $movies = App\Movie::all();
 
       return view("peliculas", ["moviesVista" => $movies]);

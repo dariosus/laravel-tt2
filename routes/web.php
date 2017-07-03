@@ -38,3 +38,8 @@ Route::post("peliculas/{id}/editar", "PeliculasController@update");
 Route::get("/peliculas/{id}/delete", "PeliculasController@delete");
 
 Route::get("/peliculas/{id}", "PeliculasController@mostrar");
+
+Route::get("/generos", "GenerosController@listar");
+Route::get("/generos/test", "GenerosController@test");
+
+Route::get("/generos/test2", "GenerosController@asociarPeliConActor");
